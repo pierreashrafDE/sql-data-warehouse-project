@@ -40,10 +40,10 @@ BEGIN
 			T.cst_key,
 			TRIM(T.cst_firstname) AS cst_firstname,
 			TRIM(T.cst_lastname) AS cst_lastname,
-			CASE UPPER(TRIM(T.cst_material_status))
+			CASE UPPER(TRIM(T.cst_marital_status))
 				WHEN 'S' THEN 'Single'
 				WHEN 'M' THEN 'Married'
-				ELSE 'N/A' END AS cst_material_status,
+				ELSE 'N/A' END AS cst_marital_status,
 			CASE UPPER(TRIM(T.cst_gndr))
 				WHEN 'M' THEN 'Male'
 				WHEN 'F' THEN 'Female'
