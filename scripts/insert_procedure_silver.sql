@@ -31,7 +31,7 @@ BEGIN
 			cst_key,
 			cst_firstname,
 			cst_lastname,
-			cst_material_status,
+			cst_marital_status,
 			cst_gndr,
 			cst_create_date
 		)
@@ -193,9 +193,9 @@ BEGIN
 		SELECT
 			EPC.id,
 			EPC.cat,
-			EPC.suncat,
+			EPC.subcat,
 			EPC.maintenance
-		FROM bronze.erp_px_cat_gv2 AS EPC
+		FROM bronze.erp_px_cat_g1v2 AS EPC
 		SET @end_time = GETDATE();
 		PRINT 'Load duration: ' + CAST(DATEDIFF(SECOND, @start_time, @end_time) AS NVARCHAR) + ' Seconds';
 		--Loading time for the whole batch
