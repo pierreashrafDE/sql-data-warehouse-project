@@ -105,12 +105,12 @@ BEGIN
 		PRINT 'Load Duration: ' + CAST(DATEDIFF(SECOND, @start_time, @end_time) AS NVARCHAR) + ' Seconds';
 
 
-		--truncate and insert data to table: 'erp_px_cat_gv2'
+		--truncate and insert data to table: 'erp_px_cat_g1v2'
 		SET @start_time = GETDATE();
 		PRINT 'Truncating Table: bronze.erp_px_cat_gv2';
 		TRUNCATE TABLE bronze.erp_px_cat_gv2;
 
-		PRINT 'Inserting Data into: bronze.erp_px_cat_gv2';
+		PRINT 'Inserting Data into: bronze.erp_px_cat_g1v2';
 		BULK INSERT bronze.erp_px_cat_gv2
 		FROM 'C:\datasets\source_erp\PX_CAT_G1V2.csv'
 		WITH (
