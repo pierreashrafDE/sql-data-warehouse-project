@@ -18,7 +18,7 @@ SELECT
 	CI.cst_firstname AS first_name,
 	CI.cst_lastname AS last_name,
 	LA.cntry AS country,
-	CI.cst_material_status AS marital_status,
+	CI.cst_marital_status AS marital_status,
 	CASE WHEN CI.cst_gndr != 'N/A' THEN CI.cst_gndr
 		 ELSE COALESCE(CA.gen, 'N/A') END AS gender,
 	CI.cst_create_date AS create_date,
@@ -38,13 +38,13 @@ SELECT
 	PN.prd_nm AS product_name,
 	PN.cat_id AS category_id,
 	EP.cat AS category,
-	EP.suncat AS subcategory,
+	EP.subcat AS subcategory,
 	EP.maintenance,
 	PN.prd_cost AS cost,
 	PN.prd_line AS product_line,
 	PN.prd_start_dt AS start_date
 FROM silver.crm_prd_info AS PN
-LEFT JOIN silver.erp_px_cat_gv2 AS EP
+LEFT JOIN silver.erp_px_cat_g1v2 AS EP
 ON PN.cat_id = EP.id
 
 
