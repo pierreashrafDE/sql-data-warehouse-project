@@ -181,13 +181,13 @@ BEGIN
 
 		--CLEANING [ERP_PX_CAT_GV2]
 		SET @start_time = GETDATE();
-		PRINT 'Truncating table: silver.erp_px_cat_gv2';
-		TRUNCATE TABLE silver.erp_px_cat_gv2;
-		PRINT 'Inserting data into: silver.erp_px_cat_gv2';
-		INSERT INTO silver.erp_px_cat_gv2 (
+		PRINT 'Truncating table: silver.erp_px_cat_g1v2';
+		TRUNCATE TABLE silver.erp_px_cat_g1v2;
+		PRINT 'Inserting data into: silver.erp_px_cat_g1v2';
+		INSERT INTO silver.erp_px_cat_g1v2 (
 			id,
 			cat,
-			suncat,
+			subcat,
 			maintenance
 		)
 		SELECT
